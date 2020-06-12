@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    const classify = (number) => {
+      let start = 1;
+      let total = 0;
+      while (start < number) {
+        //console.log(start);
+        if (number % start === 0) {
+          total += start;
+        }
+        if (total === number) {
+
+        }
+        start += 1;
+      }
+      return total;
+    }
+    console.log(classify(6));
+
+  </script>
+</body>
+
+</html>
