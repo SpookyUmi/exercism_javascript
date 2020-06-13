@@ -4,6 +4,9 @@
 //
 
 export const classify = (number) => {
+  if (number <= 0) {
+    throw (new Error('Classification is only possible for natural numbers.'))
+  }
   let start = 1;
   let total = 0;
   while (start < number) {
@@ -11,9 +14,17 @@ export const classify = (number) => {
     if (number % start === 0) {
       total += start;
     }
-  // if (total === number) {}
     start += 1;
   }
-  return total;
+  if (total === number) {
+    return 'perfect';
+  }
+  if (total > number) {
+    return 'abundant';
+  }
+  if (total < number) {
+    return 'deficient';
+  }
+  //return total;
 }
 console.log(classify(6));

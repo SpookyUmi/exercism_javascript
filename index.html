@@ -19,12 +19,13 @@
         if (number % start === 0) {
           total += start;
         }
-        if (total === number) {
-
-        }
         start += 1;
       }
-      return total;
+      if (total === number) {
+        return 'perfect';
+      }
+
+      //return total;
     }
     console.log(classify(6));
 
