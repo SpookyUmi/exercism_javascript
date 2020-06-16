@@ -11,23 +11,31 @@
 
   <script>
 
-    const classify = (number) => {
-      let start = 1;
-      let total = 0;
-      while (start < number) {
-        //console.log(start);
-        if (number % start === 0) {
-          total += start;
-        }
+    const isPangram = (string) => {
+      if (string === '') {
+        return false
+      }
+      /*  let upAlphabet = [];
+       console.log(upAlphabet)
+       let upStart = 'A'.charCodeAt(0);
+       let upEnd = 'Z'.charCodeAt(0);
+       for (let e = upStart; e <= upEnd; e++) {
+         upAlphabet.push(String(e));
+       } */
+      string.toUpperCase();
+      let start = 65;
+      let index = 0;
+      while (start <= 90) {
         start += 1;
+        index += 1
       }
-      if (total === number) {
-        return 'perfect';
-      }
+      let charCode = string.charCodeAt(index);
+      /* if (start = charCode) {
+        return true
+      } */
+    };
 
-      //return total;
-    }
-    console.log(classify(6));
+    console.log(isPangram('hello'))
 
   </script>
 </body>
