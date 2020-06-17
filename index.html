@@ -26,9 +26,9 @@
         alphabet.push(e);
       }
       //Troisième étape, modifier la phrase entrée pour qu'elle soit du même type que notre alphabet et la stocker dans une variable :
-      const codeArray = string.toUpperCase().split('').map(e => e.charCodeAt(0));
+      const codeArray = string.toUpperCase().split('').map(letter => letter.charCodeAt(0));
       //Quatrième étape, créer une fonction qui vérifie que notre phrase modifiée contient tous les éléments de notre alphabet :
-      let findMatch = (codeA, alph) => alph.every(e => codeA.includes(e));
+      let findMatch = (codeA, alph) => alph.every(el => codeA.includes(el));
       //Dernière étape, donner les conditions à notre fonction :
       if (findMatch(codeArray, alphabet)) return true
       return false
