@@ -11,37 +11,25 @@
 
   <script>
 
-
-
-    // "isPangram" = la fonction dans laquelle on passe la phrase. Elle contient d'autres fonctions, des variables et des conditions.
-    // "string" = le paramètre qu'on entre dans la fonction, dans le cas présent, une phrase ou chaîne de caractères. J'aurais aussi pu l'appeler "pizza" ou "x", peu importe. Pareil pour tous les autres mots en bleu : c'est le codeur qui choisit le nom des variables (comme x et y en math).
     const isPangram = (string) => {
-      // Première étape, retourner "faux" si on entre un objet vide dans la fonction :
-      if (!string) return false
-      // Deuxième étape, simuler un alphabet que l'on stocke dans une variable :
+      if (string === '') return true
+
       let alphabet = [];
       let upStart = 'A'.charCodeAt(0);
       let upEnd = 'Z'.charCodeAt(0);
       for (let e = upStart; e <= upEnd; e++) {
         alphabet.push(e);
       }
-      //Troisième étape, modifier la phrase entrée pour qu'elle soit du même type que notre alphabet et la stocker dans une variable :
       const codeArray = string.toUpperCase().split('').map(letter => letter.charCodeAt(0));
-      //Quatrième étape, créer une fonction qui vérifie que notre phrase modifiée contient tous les éléments de notre alphabet :
-      let findMatch = (codeA, alph) => alph.every(el => codeA.includes(el));
-      //Dernière étape, donner les conditions à notre fonction :
-      if (findMatch(codeArray, alphabet)) return true
+      let findMatch = (codeA, alph) => alph.some(el => codeA.includes(el));
+      if (findMatch(codeArray, alphabet)) {
+        function hasDuplicates(codeArray) {
+
+        }
+      }
       return false
-      //Cette dernière étape signifie :
-      //1- Si notre phrase contient tout notre alphabet, retourne "vrai";
-      //2- Sinon, retourne "faux"
-      // Voilà :D
     };
-
-
-
-
-
+    console.log('roses are red')
 
   </script>
 </body>
