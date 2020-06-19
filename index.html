@@ -5,31 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    html {
+      background-color: dodgerblue;
+    }
+  </style>
 </head>
 
 <body>
 
   <script>
 
-    const isPangram = (string) => {
+    const isIsogram = (string) => {
       if (string === '') return true
 
-      let alphabet = [];
-      let upStart = 'A'.charCodeAt(0);
-      let upEnd = 'Z'.charCodeAt(0);
-      for (let e = upStart; e <= upEnd; e++) {
-        alphabet.push(e);
-      }
-      const codeArray = string.toUpperCase().split('').map(letter => letter.charCodeAt(0));
-      let findMatch = (codeA, alph) => alph.some(el => codeA.includes(el));
-      if (findMatch(codeArray, alphabet)) {
-        function hasDuplicates(codeArray) {
-
-        }
-      }
-      return false
+      const sentence = 'thumbscrew-japingly'.match(/\w/gi)
+      const regMatch = [...new Set('thumbscrew-japingly'.match(/\w/gi))];
+      console.log(regMatch)
+      console.log(sentence)
+      console.log(sentence === regMatch)
+      if (sentence === regMatch) {
+        return true
+      } return false
     };
-    console.log('roses are blue')
+    isIsogram();
 
   </script>
 </body>
