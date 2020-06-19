@@ -18,15 +18,16 @@
 
     const isIsogram = (string) => {
       if (string === '') return true
-
-      const sentence = 'thumbscrew-japingly'.match(/\w/gi)
-      const regMatch = [...new Set('thumbscrew-japingly'.match(/\w/gi))];
-      console.log(regMatch)
+      const lowerCase = 'isogram'.toLowerCase();
+      const sentence = lowerCase.match(/\w/gi)
+      const regMatch = [...new Set(lowerCase.match(/\w/gi))];
+      //let findMatch = (regM, sen) => sen.every(el => regM.includes(el))
       console.log(sentence)
-      console.log(sentence === regMatch)
-      if (sentence === regMatch) {
+      console.log(regMatch)
+      console.log(sentence.length === regMatch.length)
+      /* if (findMatch(regMatch, sentence)) {
         return true
-      } return false
+      } return false */
     };
     isIsogram();
 

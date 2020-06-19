@@ -5,10 +5,10 @@
 
 export const isIsogram = (string) => {
   if (string === '') return true
-
-  const sentence = string.match(/\w/gi);
-  const regMatch = [...new Set(string.match(/\w/gi))];
-  if (sentence === regMatch) {
+  const lowerCase = string.toLowerCase();
+  const sentence = lowerCase.match(/\w/gi)
+  const regMatch = [...new Set(lowerCase.match(/\w/gi))];
+  if (sentence.length === regMatch.length) {
     return true
   } return false
 };
