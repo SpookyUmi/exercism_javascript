@@ -3,6 +3,8 @@
 // convenience to get you started writing code faster.
 //
 
-export const isValid = () => {
-  throw new Error("Remove this statement and implement this function");
+export const isValid = (number) => {
+  if (number.length !== 10) return false
+  const regMatch = number.match(/[\dx]/gi)
+  if (regMatch.findIndex('X') !== regMatch.length - 1 /* = 9 */) return false
 };
